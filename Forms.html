@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Formularios</title>
+</head>
+<body>
+	<header>
+		<h1>Formularios</h1>
+	</header>
+	<section>
+		<article>
+			<h2>Descripción</h2>
+			<p>La etiqueta form nos permite crear formularios en la página web, de esta manera el usuario interactua con ella.</p>
+			<p>Es importante introducir algunos argumentos al crear un formulario:</p>
+			<ul>
+				<li>id: Es el identificador del formulario.</li>
+				<li>name: Es el nombre del formulario.</li>
+				<li>method: Es la acción que hará el formulario, en este ejemplo el tipo es post.</li>
+				<li>action: En este atributo se incluye el archivo de backend que trabajará con la información.</li>
+			</ul>
+			<p>Dentro de un formulario existen dos tipos de objetos</p>
+			<ol>
+				<li>Botones</li>
+				<li>Casillas de información</li>
+			</ol>
+			<p>La diferencia entre ellos es la manera en como se declaran los argumentos, para esto
+			nos apoyamos con la etiqueta input.</p>
+			<p>Para el caso de los botones se debe designar el parámetro type como: submit</p>
+				<form id='form' name='form'>
+        <input type='submit' name='Submit' id='button' value='Bóton de ejemplo' />
+    </form>
+    <p>En este tipo de objeto podemos cambiar el texto del bóton colocando el texto que deesemos en el parámetro
+    value.</p>
+    <form id='form' name='form'>
+        <input type='submit' name='Submit' id='button' value='Texto diferente' />
+    </form>
+    <p>Estos botones realmente no hacen nada, pero podemos crear un bóton que nos permita regresar al inicio asignando 
+    al parámetro action el nombre del archivo de inicio.</p>
+    <form id='form' name='form' method='post' action='index.html'>
+        <input type='submit' name='Submit' id='button' value='Inicio' />
+    </form>
+    <p>*** Presionar el bóton te regresará a la pestaña de inicio ***</p>
+    <p>Para las casillas de información debemos asignar al parámetro type como: text</p>
+    <form id='form' name='form'>
+        <input type='text' />
+    </form>
+    <p>La manera de agregar un texto en la casilla es diferente ya que el tipo 'text' maneja dos argumentos diferentes
+    a los del tipo submit</p>
+    <ol>
+    	<li>placeholder: Es el texto que se muestra por defecto en la casilla</li>
+    	<li>onfocus: Detecta si el usuario va a escribir algo y pone el puntero dentro de la casilla, se puede combinar
+    	con Js para que cambie el texto de la casilla hasta que el usuario escriba algo</li>
+    </ol>
+    <form id='form' name='form'>
+        <input type='text' placeholder='Texto dentro de casilla'/>
+        
+        <input type='text' placeholder='Texto con onfocus' onfocus='if(this.placeholder == '')this.placeholder='Texto con onfocus''/>
+    </form>
+		</article>
+	</section>
+	<a href="index.html">Inicio</a>
+</body>
+</html>
